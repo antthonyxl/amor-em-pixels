@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+  body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #000;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    #heartCanvas {
+      display: block;
+      cursor: pointer; /* Indica que o canvas é interativo */
+    }
+
+    #teamoCanvas {
+      display: none;
+      background-color: black;
+      cursor: pointer; /* Indica que o canvas é interativo */
+    }
+
+    #text-container {
+      position: fixed;
+      top: calc(50% + 250px);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      width: 100%;
+      max-width: 400px;
+      height: 80px;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    #text-container p {
+      margin: 0;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      font-size: 2em;
+      color: #fff;
+    }
+
+    #text-container p.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #startButton {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      transition: all 0.8s ease;
+      opacity: 1;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    #startButton:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 1);
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    #startButton.fade-out {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.9);
+      pointer-events: none;
+    }
+    #central-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  height: 100px;
+  overflow: hidden;
+  display: none;
+}
+
+#central-message p {
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  opacity: 0;
+  /* Remove o translateY para não mover o texto */
+  /* transform: translateY(20px); */
+  transition: opacity 1.5s ease; /* Só opacidade para fade */
+  font-size: 1.2em;
+  color: #fff;
+  font-weight: bold;
+}
+
+#central-message p.show {
+  opacity: 1;
+  /* Remove transform também aqui */
+  /* transform: translateY(0); */
+}
+
+
+
+
+#central-message p.show {
+  opacity: 1;
+  transform: translateY(0);
+}
